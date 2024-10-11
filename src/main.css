@@ -907,3 +907,15 @@ html[lang~="ar"] .form-vertical ul {
 html[lang~="ar"] #kc-info-message {
     text-align: right;
 }
+
+html[lang~="ar"] .pf-c-form-control[aria-invalid=true] {
+    padding-right: 0 !important;
+    padding-left: 2rem !important;
+    text-align: right !important;
+    direction: rtl;
+}
+
+html[lang~="ar"] .pf-c-form-control {
+    text-align: right !important;
+    direction: rtl;
+}
