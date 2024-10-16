@@ -145,19 +145,21 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     />
                                 )}
                             </div>
-
                             <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
                                 <div id="kc-form-options">
                                     {realm.rememberMe && !usernameHidden && (
-                                        <div className="checkbox">
-                                            <label>
+                                        <div className="switch-container">
+                                            <label className="switch">
                                                 <input
                                                     tabIndex={5}
                                                     id="rememberMe"
                                                     name="rememberMe"
                                                     type="checkbox"
                                                     defaultChecked={!!login.rememberMe}
-                                                />{" "}
+                                                />
+                                                <span className="slider round"></span>
+                                            </label>
+                                            <label className="switch-label" htmlFor="rememberMe">
                                                 {msg("rememberMe")}
                                             </label>
                                         </div>
