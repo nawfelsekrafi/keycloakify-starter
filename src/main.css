@@ -1,8 +1,7 @@
 /* Patternfly CSS places a "bg-login.jpg" as the background on this ".login-pf" class.
    This clashes with the "keycloak-bg.png' background defined on the body below.
    Therefore the Patternfly background must be set to none. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+   @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
     font-family: 'Inter', sans-serif;
 }
@@ -1214,5 +1213,39 @@ input:checked+.slider:before {
         margin-left: 30vw !important;
         background: #F1F6FD;
         border-radius: 16px;
+    }
+}
+
+html[lang~="ar"] {
+    *{
+        font-family: "Almarai", sans-serif;
+    }
+    .pf-c-form-control  {
+        border-radius: 0px 8px 8px 0px ;
+    }
+
+    .kcFormPasswordVisibilityButtonClass {
+        border-radius: 8px 0px 0px 8px;
+    }
+
+    #kc-form-login .kcLabelClass {
+        direction: rtl;
+    }
+    .slogan {
+        letter-spacing: unset;
+    }
+
+    #kc-register-form .kcInputGroup .kcInputClass {
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 0px 8px 8px 0px !important;
+    }
+    
+    #kc-register-form .kcInputClass {
+        border-radius: 8px !important;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: calc(100% - 20px);
     }
 }

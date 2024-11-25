@@ -7,6 +7,7 @@ import { useSetClassName } from "keycloakify/tools/useSetClassName";
 import { useInitialize } from "keycloakify/login/Template.useInitialize";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
+import logoImage from "../login/img/logo.svg";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -89,9 +90,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             </div>
                         </div>
                     )}
-                               <img src="logo.svg" alt="" className="logo" />
+                    <img src={logoImage} alt="" className="logo" />
                     {/* <div className="brand-title">Softy HR</div> */}
-            
+
                     {(() => {
                         const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
                             <h1 id="kc-page-title">{headerNode}</h1>
@@ -106,7 +107,6 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 </a>
                             </div>
                         );
-                        
 
                         if (displayRequiredFields) {
                             return (
@@ -124,9 +124,11 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
                         return node;
                     })()}
-         
-                            <div className="slogan">
-                        <span>Effortless HR, Endless Possibilities</span>
+
+                    <div className="slogan">
+                        {currentLanguage?.languageTag == "en" && <span>Effortless HR, Endless Possibilities</span>}
+                        {currentLanguage?.languageTag == "ar" && <span>إدارة الموارد البشرية بسلاسة، عالم بلا حدود</span>}
+                        {currentLanguage?.languageTag == "fr" && <span>Ressources Humaines Fluides, Potentiel Infini</span>}
                     </div>
                 </header>
                 <div id="kc-content">
