@@ -269,7 +269,17 @@ function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: s
                 aria-controls={passwordInputId}
                 onClick={toggleIsPasswordRevealed}
             >
-                <i className={kcClsx(isPasswordRevealed ? "kcFormPasswordVisibilityIconHide" : "kcFormPasswordVisibilityIconShow")} aria-hidden />
+                {isPasswordRevealed ? (
+                    <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1358_4612)'%3e%3cpath%20d='M17.94%2017.94C16.2306%2019.243%2014.1491%2019.9649%2012%2020C5%2020%201%2012%201%2012C2.24389%209.68192%203.96914%207.65663%206.06%206.06003M9.9%204.24002C10.5883%204.0789%2011.2931%203.99836%2012%204.00003C19%204.00003%2023%2012%2023%2012C22.393%2013.1356%2021.6691%2014.2048%2020.84%2015.19M14.12%2014.12C13.8454%2014.4148%2013.5141%2014.6512%2013.1462%2014.8151C12.7782%2014.9791%2012.3809%2015.0673%2011.9781%2015.0744C11.5753%2015.0815%2011.1752%2015.0074%2010.8016%2014.8565C10.4281%2014.7056%2010.0887%2014.4811%209.80385%2014.1962C9.51897%2013.9113%209.29439%2013.572%209.14351%2013.1984C8.99262%2012.8249%208.91853%2012.4247%208.92563%2012.0219C8.93274%2011.6191%209.02091%2011.2219%209.18488%2010.8539C9.34884%2010.4859%209.58525%2010.1547%209.88%209.88003'%20stroke='%23667085'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M1%201L23%2023'%20stroke='%23667085'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1358_4612'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                        alt=""
+                    />
+                ) : (
+                    <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2012C1%2012%205%204%2012%204C19%204%2023%2012%2023%2012C23%2012%2019%2020%2012%2020C5%2020%201%2012%201%2012Z'%20stroke='%23667085'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2015C13.6569%2015%2015%2013.6569%2015%2012C15%2010.3431%2013.6569%209%2012%209C10.3431%209%209%2010.3431%209%2012C9%2013.6569%2010.3431%2015%2012%2015Z'%20stroke='%23667085'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                        alt=""
+                    />
+                )}
             </button>
         </div>
     );

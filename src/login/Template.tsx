@@ -89,7 +89,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             </div>
                         </div>
                     )}
-                    <div className="brand-title">Softy HR</div>
+                               <img src="logo.svg" alt="" className="logo" />
+                    {/* <div className="brand-title">Softy HR</div> */}
+            
                     {(() => {
                         const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
                             <h1 id="kc-page-title">{headerNode}</h1>
@@ -104,6 +106,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 </a>
                             </div>
                         );
+                        
 
                         if (displayRequiredFields) {
                             return (
@@ -121,6 +124,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
                         return node;
                     })()}
+         
+                            <div className="slogan">
+                        <span>Effortless HR, Endless Possibilities</span>
+                    </div>
                 </header>
                 <div id="kc-content">
                     <div id="kc-content-wrapper">
